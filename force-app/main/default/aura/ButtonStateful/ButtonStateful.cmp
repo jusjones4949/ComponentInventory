@@ -1,0 +1,28 @@
+<aura:component >
+    <aura:attribute name="buttonstate" type="Boolean" default="false"/>
+	<!-- PAGE HEADER -->
+    <lightning:layout class="slds-page-header slds-page-header--object-home">
+        <lightning:layoutItem>
+            <lightning:icon iconName="action:goal"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem padding="horizontal-small">
+            <div class="page-section page-header">
+                <h1 class="slds-text-heading--label">ButtonStateful</h1>
+            </div>
+        </lightning:layoutItem>
+    </lightning:layout>
+    <!-- / PAGE HEADER -->
+    <lightning:layoutItem>
+        <lightning:buttonStateful
+            labelWhenOff="Follow"
+            labelWhenOn="Following"
+            labelWhenHover="Unfollow"
+            iconNameWhenOff="utility:add"
+            iconNameWhenOn="utility:check"
+            iconNameWhenHover="utility:close"
+            state="{! v.buttonstate }"
+            onclick="{! c.handleClick }"
+        />
+    </lightning:layoutItem>
+
+</aura:component>

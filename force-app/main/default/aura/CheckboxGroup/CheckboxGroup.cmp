@@ -1,0 +1,29 @@
+<aura:component>
+    <aura:attribute name="options" type="List" default="[
+        {'label': 'Ross', 'value': 'option1'},
+        {'label': 'Rachel', 'value': 'option2'}
+        ]"/>
+    <aura:attribute name="value" type="List" default="option1"/>
+    
+    <!-- PAGE HEADER -->
+    <lightning:layout class="slds-page-header slds-page-header--object-home">
+        <lightning:layoutItem>
+            <lightning:icon iconName="action:goal"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem padding="horizontal-small">
+            <div class="page-section page-header">
+                <h1 class="slds-text-heading--label">CheckboxGroup</h1>
+            </div>
+        </lightning:layoutItem>
+    </lightning:layout>
+    <!-- / PAGE HEADER -->
+    <lightning:layoutItem>
+        
+        <lightning:checkboxGroup name="Checkbox Group"
+                                 label="Checkbox Group"
+                                 options="{! v.options }"
+                                 value="{! v.value }"
+                                 onchange="{! c.handleChange }"/>
+    </lightning:layoutItem>
+    
+</aura:component>

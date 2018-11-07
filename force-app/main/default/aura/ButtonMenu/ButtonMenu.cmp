@@ -1,0 +1,45 @@
+<aura:component>
+    
+    <!-- PAGE HEADER -->
+    <lightning:layout class="slds-page-header slds-page-header--object-home">
+        <lightning:layoutItem>
+            <lightning:icon iconName="action:goal"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem padding="horizontal-small">
+            <div class="page-section page-header">
+                <h1 class="slds-text-heading--label">ButtonMenu</h1>
+            </div>
+        </lightning:layoutItem>
+    </lightning:layout>
+    <!-- / PAGE HEADER -->
+	<lightning:layoutItem>
+
+        <lightning:buttonMenu aura:id="menu" onselect="{! c.handleSelect }" alternativeText="Show menu">
+            <lightning:menuItem value="MenuItemOne" label="Menu Item One" />
+            <lightning:menuItem value="MenuItemTwo" label="Menu Item Two" />
+            <lightning:menuItem value="MenuItemThree" label="Menu Item Three" disabled="true" />
+            <lightning:menuItem value="MenuItemFour" label="Menu Item Four" />
+        </lightning:buttonMenu>
+    
+    </lightning:layoutItem>
+    
+    <lightning:layoutItem>
+        
+        <lightning:buttonMenu aura:id="menu" iconName="utility:settings" onselect="{! c.handleSelect }" alternativeText="Show menu">
+            <lightning:menuItem value="MenuItemOne" label="Menu Item One" />
+            <lightning:menuItem value="MenuItemTwo" label="Menu Item Two" />
+            <lightning:menuItem value="MenuItemThree" label="Menu Item Three" disabled="true" />
+            <lightning:menuItem value="MenuItemFour" label="Menu Item Four" />
+        </lightning:buttonMenu>
+    
+    </lightning:layoutItem>
+    
+    <lightning:layoutItem>
+        <lightning:buttonMenu aura:id="menu" alternativeText="Show menu" onselect="{! c.handleSelect2 }">
+        <lightning:menuItem aura:id="menuItems" label="Table View" value="tableView" checked="true" iconName="utility:table"/>
+        <lightning:menuItem aura:id="menuItems" label="Kanban Board" value="kanbanBoard" checked="false" iconName="utility:kanban"/>
+        <lightning:menuItem aura:id="menuItems" label="List View" value="listView" checked="false" iconName="utility:side_list"/>
+    </lightning:buttonMenu>
+    
+    </lightning:layoutItem>
+</aura:component>

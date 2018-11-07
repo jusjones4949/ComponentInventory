@@ -1,0 +1,36 @@
+<aura:component >
+    <aura:attribute name="liked" default="false" type="Boolean" />
+    <aura:attribute name="answered" default="false" type="Boolean" />
+    
+	<!-- PAGE HEADER -->
+    <lightning:layout class="slds-page-header slds-page-header--object-home">
+        <lightning:layoutItem>
+            <lightning:icon iconName="action:goal"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem padding="horizontal-small">
+            <div class="page-section page-header">
+                <h1 class="slds-text-heading--label">ButtonIconStateful</h1>
+            </div>
+            
+        </lightning:layoutItem>
+    </lightning:layout>
+    <!-- / PAGE HEADER -->
+    <lightning:layoutItem>
+
+        <div class="slds-m-around_medium">
+            <lightning:buttonIconStateful iconName="utility:like" selected="{! v.liked }" onclick="{! c.handleLikeButtonClick }" alternativeText="Like" />
+        </div>
+        <div class="slds-m-around_medium">
+            <lightning:buttonIconStateful iconName="utility:answer" selected="{! v.answered }" onclick="{! c.handleAnswerButtonClick }" alternativeText="Answer" size="small"/>
+        </div>
+        <!-- disabled -->
+        <div class="slds-m-around_medium">
+            <lightning:buttonIconStateful iconName="utility:like"  alternativeText="Disabled" disabled="true"/>
+        </div>
+        
+        <br/>
+        <lightning:formattedUrl value="https://lightningdesignsystem.com/icons/#utility" />
+    </lightning:layoutItem>
+
+    
+</aura:component>

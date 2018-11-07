@@ -1,0 +1,30 @@
+<aura:component >
+
+    <!-- handlers-->
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    
+	<!-- PAGE HEADER -->
+    <lightning:layout class="slds-page-header slds-page-header--object-home">
+        <lightning:layoutItem>
+            <lightning:icon iconName="action:goal"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem padding="horizontal-small">
+            <div class="page-section page-header">
+                <h1 class="slds-text-heading--label">Component</h1>
+            </div>
+        </lightning:layoutItem>
+    </lightning:layout>
+    <!-- / PAGE HEADER -->
+    <lightning:layoutItem>
+
+        <!-- the container element determine the height of the datatable -->
+    	<div style="height: 300px">
+        <lightning:datatable
+                keyField="id"
+                data="{! v.data }"
+                columns="{! v.columns }"
+                hideCheckboxColumn="true"/>
+        </div>
+    </lightning:layoutItem>
+    
+</aura:component>

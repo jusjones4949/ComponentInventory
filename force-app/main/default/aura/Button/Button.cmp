@@ -1,0 +1,52 @@
+<aura:component >
+	<!-- PAGE HEADER -->
+    <lightning:layout class="slds-page-header slds-page-header--object-home">
+        <lightning:layoutItem>
+            <lightning:icon iconName="action:goal"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem padding="horizontal-small">
+            <div class="page-section page-header">
+                <h1 class="slds-text-heading--label">Button</h1>
+            </div>
+        </lightning:layoutItem>
+    </lightning:layout>
+    <!-- / PAGE HEADER -->
+    <lightning:layoutItem>
+
+        <!-- Base variant: Makes a button look like a link -->
+        <lightning:button variant="base" label="Base" title="Base action" 
+                          onclick="{! c.handleClick }"/>
+    
+        <!-- Neutral variant (default) -->
+        <lightning:button label="Neutral" title="Neutral action" 
+                          onclick="{! c.handleClick }"/>
+    
+        <!-- Brand variant: Identifies the primary action in a group of buttons -->
+        <lightning:button variant="brand" label="Brand action" 
+                          title="Brand action" onclick="{! c.handleClick }" />
+    
+        <!-- Destructive variant: Identifies a potentially negative action -->
+        <lightning:button variant="destructive" label="Destructive" 
+                          title="Destructive action" onclick="{! c.handleClick }"/>
+    
+        <!-- Success variant: Identifies a successful action -->
+        <lightning:button variant="success" label="Success" 
+                          title="Success" onclick="{! c.handleClick }"/>
+        <!-- Icons -->
+        <lightning:button label="Download" iconName="utility:download" iconPosition="left" />
+        <lightning:button label="Download" iconName="utility:download" iconPosition="right"/>
+            
+        <lightning:button variant="neutral" disabled="true">Disabled Neutral</lightning:button>
+        
+        <!-- Inverse -->
+        <lightning:button label="Inverse" variant="inverse" />
+        
+        <!--AccessKey and TabIndex -->
+        <lightning:button label="With Access Key 'x'" accesskey="x" onclick="{! c.handleClick }"/>
+    <lightning:button label="With Access Key 'y'" accesskey="y" onclick="{! c.handleClick }"/>
+    <lightning:button label="With Access Key 'z' and Tab Index" accesskey="z" tabindex="0" onclick="{! c.handleClick }"/>
+        
+        
+    </lightning:layoutItem>
+
+</aura:component>

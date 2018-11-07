@@ -1,0 +1,46 @@
+<aura:component >
+    
+    <!-- For iteration breadcrumbs -->
+    <aura:attribute name="myBreadcrumbs" type="Object"/>
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    
+    
+	<!-- PAGE HEADER -->
+    <lightning:layout class="slds-page-header slds-page-header--object-home">
+        <lightning:layoutItem>
+            <lightning:icon iconName="action:goal"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem padding="horizontal-small">
+            <div class="page-section page-header">
+                <h1 class="slds-text-heading--label">Breadcrumb</h1>
+            </div>
+        </lightning:layoutItem>
+    </lightning:layout>
+    <!-- / PAGE HEADER -->
+    <p class="slds-p-horizontal--small">
+        <lightning:layoutItem>
+            <lightning:breadcrumbs>
+                <lightning:breadcrumb label="Parent Account" href="path/to/place/1"/>
+                <lightning:breadcrumb label="Case" href="path/to/place/2"/>
+            </lightning:breadcrumbs>
+        </lightning:layoutItem>
+    </p>
+	<p class="slds-p-horizontal--small">
+        <lightning:layoutItem>
+            <lightning:breadcrumbs>
+                <lightning:breadcrumb label="Parent Account" href="path/to/place/1" onclick="{! c.navigateToCustomPage1 }"/>
+                <lightning:breadcrumb label="Case" href="path/to/place/2" onclick="{! c.navigateToCustomPage2 }"/>
+            </lightning:breadcrumbs>
+        </lightning:layoutItem>
+    </p>
+    <p class="slds-p-horizontal--small">
+        <lightning:layoutItem>
+            <lightning:breadcrumbs>
+                <aura:iteration items="{! v.myBreadcrumbs }" var="crumbs">
+                    <lightning:breadcrumb label="{! crumbs.label }" onclick="{! c.navigateTo }" name="{! crumbs.name }"/>
+                </aura:iteration>
+            </lightning:breadcrumbs>
+        </lightning:layoutItem>
+    </p>
+    
+</aura:component>
