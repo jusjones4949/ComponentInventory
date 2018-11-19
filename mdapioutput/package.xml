@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+  <types>
+    <name>AuraDefinitionBundle</name>
+    <members>Accordion</members>
+    <members>Avatar</members>
+    <members>Badge</members>
+    <members>Breadcrumb</members>
+    <members>Button</members>
+    <members>ButtonGroup</members>
+    <members>ButtonIcon</members>
+    <members>ButtonIconStateful</members>
+    <members>ButtonMenu</members>
+    <members>ButtonStateful</members>
+    <members>Card</members>
+    <members>Carousel</members>
+    <members>CheckboxGroup</members>
+    <members>ComboBox</members>
+    <members>DataTable</members>
+    <members>LightningComponentInventory</members>
+    <members>fileCard</members>
+  </types>
+  <types>
+    <name>ApexClass</name>
+    <members>fileViewerCtrl</members>
+  </types>
+  <version>44.0</version>
+</Package>

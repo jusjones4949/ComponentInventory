@@ -1,0 +1,28 @@
+<aura:component >
+    <aura:attribute name="optionsJS" type="List" default="[]"/>
+    <aura:attribute name="options" type="List" default="[
+        {'label': 'New', 'value': 'new'},
+        {'label': 'In Progress', 'value': 'inProgress'},
+        {'label': 'Finished', 'value': 'finished'},
+        ]"/>
+	<aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    
+	<!-- PAGE HEADER -->
+    <lightning:layout class="slds-page-header slds-page-header--object-home">
+        <lightning:layoutItem>
+            <lightning:icon iconName="action:goal"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem padding="horizontal-small">
+            <div class="page-section page-header">
+                <h1 class="slds-text-heading--label">ComboBox</h1>
+            </div>
+        </lightning:layoutItem>
+    </lightning:layout>
+    <!-- / PAGE HEADER -->
+    <lightning:layoutItem>
+		<lightning:combobox name="progress" label="Status" value="inProgress" placeholder="Select Progress" options="{! v.options }" onchange="{! c.handleChange }"/>
+        <hr/>
+        <lightning:combobox name="general" label="Many Options" placeholder="Select an Option" options="{! v.optionsJS }" onchange="{! c.handleChange }"/>
+    </lightning:layoutItem>
+
+</aura:component>

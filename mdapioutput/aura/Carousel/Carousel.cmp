@@ -1,0 +1,43 @@
+<aura:component >
+	<!-- PAGE HEADER -->
+    <lightning:layout class="slds-page-header slds-page-header--object-home">
+        <lightning:layoutItem>
+            <lightning:icon iconName="action:goal"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem padding="horizontal-small">
+            <div class="page-section page-header">
+                <h1 class="slds-text-heading--label">Component</h1>
+            </div>
+        </lightning:layoutItem>
+    </lightning:layout>
+    <!-- / PAGE HEADER -->
+    <lightning:layoutItem>
+	
+        <lightning:carousel disableAutoRefresh="false" 
+                            disableAutoScroll="false"
+                            scrollDuration="3">
+            <lightning:carouselImage
+                src = "/assets/carousel-01.png"
+                header = "First Card"
+                description = "First card description."
+                alternativeText = "First card accessible description."
+                href = "https://www.salesforce.com">
+            </lightning:carouselImage>
+            <lightning:carouselImage
+                src = "/docs/component-library/app/images/examples/carousel-02.png"
+                header = "Second Card"
+                description = "Second card description."
+                alternativeText = "Second card accessible description."
+                href = "https://www.salesforce.com">
+            </lightning:carouselImage>
+            <lightning:carouselImage
+                src = "/docs/component-library/app/images/examples/carousel-03.png"
+                header = "Third Card"
+                description = "Third card description."
+                alternativeText = "Third card accessible description."
+                href = "https://www.salesforce.com">
+            </lightning:carouselImage>
+        </lightning:carousel>
+        
+    </lightning:layoutItem>
+</aura:component>

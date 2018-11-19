@@ -1,0 +1,51 @@
+<aura:component >
+	<!-- PAGE HEADER -->
+    <lightning:layout class="slds-page-header slds-page-header--object-home">
+        <lightning:layoutItem>
+            <lightning:icon iconName="action:goal"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem padding="horizontal-small">
+            <div class="page-section page-header">
+                <h1 class="slds-text-heading--label">ButtonIcon</h1>
+            </div>
+            
+        </lightning:layoutItem>
+    </lightning:layout>
+    <!-- / PAGE HEADER -->
+    <lightning:layoutItem>
+
+        <!-- bare -->
+        <lightning:buttonIcon iconName="utility:settings" variant="bare" onclick="{! c.handleClick }" alternativeText="Settings" />
+        <lightning:buttonIcon iconName="utility:settings" variant="bare" onclick="{! c.handleClick }" disabled="true" alternativeText="Settings (disabled)" />
+    
+        <!-- with container -->
+        <lightning:buttonIcon iconName="utility:settings" variant="container" alternativeText="Settings" />
+        <lightning:buttonIcon iconName="utility:settings" variant="container" disabled="true" alternativeText="Settings (disabled)" />
+    
+        <!-- with border / by default -->
+        <lightning:buttonIcon iconName="utility:settings"  alternativeText="Settings" />
+        <lightning:buttonIcon iconName="utility:settings"  disabled="true" alternativeText="Settings (disabled)" />
+    
+        <!-- with border filled -->
+        <lightning:buttonIcon iconName="utility:settings"  variant="border-filled" alternativeText="Settings" />
+        <lightning:buttonIcon iconName="utility:settings"  variant="border-filled" disabled="true" alternativeText="Settings (disabled)" />
+    
+        <!--Sizes -->
+        <lightning:buttonIcon iconName="utility:down"  size="xx-small" alternativeText="View More" />
+        <lightning:buttonIcon iconName="utility:down"  size="x-small" alternativeText="View More" />
+        <lightning:buttonIcon iconName="utility:down"  size="small" alternativeText="View More" />
+        <lightning:buttonIcon iconName="utility:down"  alternativeText="View More" />
+    
+        <lightning:buttonIcon iconName="utility:down"  size="x-small"   onclick="{! c.handleClick }" variant="bare" alternativeText="View More" />
+        <lightning:buttonIcon iconName="utility:down"  size="small"     variant="bare" alternativeText="View More" />
+        <lightning:buttonIcon iconName="utility:down"  variant="bare"   alternativeText="View More" />
+        <lightning:buttonIcon iconName="utility:down"  size="large"     variant="bare" alternativeText="View More" />
+        
+        <!-- with icon styling -->
+        <lightning:buttonIcon iconName="utility:settings" variant="bare" alternativeText="Settings" iconClass="dark"/>
+        <br/>
+        <lightning:formattedUrl value="https://lightningdesignsystem.com/icons/#utility" />
+    </lightning:layoutItem>
+
+    
+</aura:component>
